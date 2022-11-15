@@ -15,11 +15,11 @@ TagManager:
   - 
   - 
   - Ground
-  - 
-  - 
-  - 
-  - 
-  - 
+  - WorldItem
+  - Player
+  - Tree
+  - Chest
+  - Bridge
   - 
   - 
   - 

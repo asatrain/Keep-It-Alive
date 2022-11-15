@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b067c9596940ba645b74e4b59335cb76, type: 3}
+  m_Name: Whiskey
+  m_EditorClassIdentifier: 
+  id: 4
+  stackable: 0
+  maxCount: 0
+  icon: {fileID: 21300000, guid: 8258f2003e3fcf0428684931ed888fc3, type: 3}
+  worldItem: {fileID: 139421367807476052, guid: 49867a024826ef74cb780eddca60a2d4,
+    type: 3}
+  bonfireHealthAddition: 0
+  isStaminaBooster: 1
+  staminaSliderColor: {r: 0.58431375, g: 0.43529412, b: 0.07058824, a: 0.54901963}
+  staminaBoostTime: 45
+  staminaBoostMultiplier: 2
+  chopPowerBoost: 3

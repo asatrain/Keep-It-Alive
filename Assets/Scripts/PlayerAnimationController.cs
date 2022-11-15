@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerAnimationController : MonoBehaviour
@@ -13,11 +11,28 @@ public class PlayerAnimationController : MonoBehaviour
         Chop
     }
 
-    [SerializeField] private Animator animator;
     private static readonly int IsWalking = Animator.StringToHash("isWalking");
     private static readonly int IsRunning = Animator.StringToHash("isRunning");
     private static readonly int Chop = Animator.StringToHash("chop");
+
+    [SerializeField] private Animator animator;
     private State currentState;
+
+    private void Start()
+    {
+        GameManager.Instance.OnGameStateChanged += GameStateChangeHandler;
+    }
+
+    private void GameStateChangeHandler(GameState prevState, GameState newState)
+    {
+        if (newState == GameState.GameOver || newState == GameState.MainMenu) SetState(State.Idle);
+    }
+
+    private void OnDestroy()
+    {
+        if (!ReferenceEquals(GameManager.Instance, null))
+            GameManager.Instance.OnGameStateChanged -= GameStateChangeHandler;
+    }
 
     public void SetState(State state)
     {
